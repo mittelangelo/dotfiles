@@ -4,14 +4,14 @@ YELLOW="\033[1;33m"
 GREEN="\033[1;32m"
 NOCOLOR="\033[0m"
 
-echo "-----------------------------------------------"
-echo "----- ${YELLOW} Welcome to your new Computer         ---"
+echo "---------------------------------------------------------"
+echo "----- ${YELLOW} Welcome to your new Computer          ---"
 echo "-----  Lets make it feel like a old friend ${NOCOLOR} ---"
-echo "-----------------------------------------------"
-echo "-----------------------------------------------"
-echo "-----------------------------------------------"
-echo "------ ${YELLOW}   Brew init         ${NOCOLOR}           --------"
-echo "-----------------------------------------------"
+echo "---------------------------------------------------------"
+echo "---------------------------------------------------------"
+echo "---------------------------------------------------------"
+echo "------ ${YELLOW}   Brew init         ${NOCOLOR}  --------"
+echo "---------------------------------------------------------"
 
 # download brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -21,33 +21,76 @@ brew update
 brew upgrade
 brew analytics off
 
-echo "-----------------------------------------------"
+echo "------------------------------------------------------------------"
 echo "------ ${YELLOW}   Brew install       ${NOCOLOR}          --------"
-echo "-----------------------------------------------"
+echo "------------------------------------------------------------------"
 
-brew install watch kubectl helm ghostscript coreutils k9s neovim nmap ranger tmux tldr youtube-dl zsh-autosuggestions zsh-completions imagemagick git 
+brew install \
+git \
+watch \ 
+kubectl \ 
+helm \
+ghostscript \
+coreutils \
+k9s \
+neovim \
+nmap \
+ranger \
+tmux \
+tldr \
+youtube-dl \
+zsh-autosuggestions \
+zsh-completions \
+imagemagick 
 
-echo "-----------------------------------------------"
+echo "------------------------------------------------------------------"
 echo "------  ${YELLOW}  Brew install cask   ${NOCOLOR}         --------"
-echo "-----------------------------------------------"
+echo "------------------------------------------------------------------"
 
-brew install -cask firefox docker audacity iterm2 vscodium rectangle michaelvillar-timer drawio bitwarden signal slack gimp veracrypt filezilla protonmail-bridge protonvpn teamviewer oversight blockblock ransomwhere libreoffice screaming-frog-seo-spider ledger-live atom little-snitch microsoft-teams zoomus  
+brew install -cask \
+firefox \
+docker \
+audacity \
+iterm2 \
+vscodium \
+rectangle \
+michaelvillar-timer \
+drawio \
+bitwarden \
+signal \
+slack \
+gimp \
+veracrypt \
+filezilla \
+protonmail-bridge \
+protonvpn \
+teamviewer \
+oversight \
+blockblock \
+ransomwhere \
+libreoffice \
+screaming-frog-seo-spider \
+ledger-live \
+atom \
+little-snitch \
+microsoft-teams \
+zoomus  
 
 # clenaup install process
 brew cleanup
 
-echo "-----------------------------------------------"
+echo "------------------------------------------------------------------"
 echo "------  ${YELLOW}  Tmux init          ${NOCOLOR}          --------"
-echo "-----------------------------------------------"
+echo "------------------------------------------------------------------"
 
 cd
 git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
 
-echo "-----------------------------------------------"
+echo "------------------------------------------------------------------"
 echo "------  ${YELLOW}  Vimrc init        ${NOCOLOR}            --------"
-echo "-----------------------------------------------"
+echo "------------------------------------------------------------------"
 
 cd
 echo ":set colorscheme evening \ :set hlsearch \ :set ignorecase" > ./.vimrc
@@ -125,13 +168,13 @@ defaults write -g NSBrowserColumnAnimationSpeedMultiplier -float 0
 # save as & dialog box speed
 defaults write NSGlobalDomainNS WindowResizeTime .001
 
-# Restart Finder
+# Restart Finder and Dock
 killall Finder
 killall Dock
 
-echo "-------------------------------------------------------------"
-echo "------  ${YELLOW}  CHANGE .zshrc (plugins) ${NOCOLOR}--------"
-echo "-------------------------------------------------------------"
+echo "-------------------------------------------------------------------------"
+echo "------  ${YELLOW}  CHANGE .zshrc (plugins) ${NOCOLOR}--------------------"
+echo "-------------------------------------------------------------------------"
 
 # Change the line 73 - ugly hardcoded ik 
 sed "73s/.*/plugins=(git zsh-vi-mode history-substring-search zsh-autosuggestions)/" ./.zshrc > ./.zshrc-copy
@@ -139,9 +182,9 @@ rm ./.zshrc
 mv ./.zshrc2 ./.zshrc
 
 
-echo "----------------------------------------------------------------"
+echo "-------------------------------------------------------------------------"
 echo "------  ${YELLOW} Things you need to install manually: ${NOCOLOR}--------"
-echo "----------------------------------------------------------------"
+echo "-------------------------------------------------------------------------"
 
 echo "${YELLOW}"
 echo "Cider - Open Source Apple Music Client"
@@ -151,17 +194,15 @@ echo "-----------------------"
 
 echo "Little Snitch - Outbound network manager"
 echo "https://www.obdev.at/products/littlesnitch/download.html"
-echo "-----------------------"
 
 echo "-----------------------"
-
 echo "Firefox"
 echo "> about:config"
-echo " - media.peerconnection.enabled -> false (disabel webRTC)"
+echo " - media.peerconnection.enabled - false "
 echo "> add-ons"
 echo " - ublock Origin"
-echo " - privacy redirect ( check if deprecated / better way without this addon) "
 
+echo "-----------------------"
 echo "${NOCOLOR}"
 
 
