@@ -41,7 +41,8 @@ tldr \
 youtube-dl \
 zsh-autosuggestions \
 zsh-completions \
-imagemagick 
+imagemagick \
+pngquant
 
 echo "------------------------------------------------------------------"
 echo "------  ${YELLOW}  Brew install cask   ${NOCOLOR}         --------"
