@@ -110,3 +110,9 @@ if type brew &>/dev/null; then
     autoload -Uz compinit
     compinit
 fi
+
+# to make vi-mode and fzf work together
+source /Users/lx/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh
+zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')
+
+eval $(thefuck --alias)

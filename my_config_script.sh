@@ -42,6 +42,9 @@ youtube-dl \
 zsh-autosuggestions \
 zsh-completions \
 imagemagick \
+bat \
+fzf \
+thefuck \
 pngquant
 
 echo "------------------------------------------------------------------"
