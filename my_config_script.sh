@@ -73,6 +73,7 @@ teamviewer \
 oversight \
 blockblock \
 ransomwhere \
+knockknock \
 libreoffice \
 screaming-frog-seo-spider \
 ledger-live \
