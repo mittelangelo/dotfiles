@@ -46,6 +46,7 @@ bat \
 fzf \
 thefuck \
 pngquant
+# zsh-kubectl-prompt
 
 echo "------------------------------------------------------------------"
 echo "------  ${YELLOW}  Brew install cask   ${NOCOLOR}         --------"
