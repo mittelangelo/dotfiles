@@ -56,6 +56,8 @@ brew install -cask \
 firefox \
 docker \
 audacity \
+obs \
+vlc \
 iterm2 \
 vscodium \
 rectangle \
@@ -68,19 +70,17 @@ gimp \
 veracrypt \
 filezilla \
 protonmail-bridge \
-protonvpn \
-teamviewer \
 oversight \
 blockblock \
 ransomwhere \
 knockknock \
 libreoffice \
-screaming-frog-seo-spider \
 ledger-live \
 atom \
 little-snitch \
-microsoft-teams \
-zoomus  
+#screaming-frog-seo-spider \
+#microsoft-teams \
+#zoomus  
 
 # clenaup install process
 brew cleanup
@@ -207,6 +207,11 @@ echo "> about:config"
 echo " - media.peerconnection.enabled - false "
 echo "> add-ons"
 echo " - ublock Origin"
+
+echo "-----------------------"
+echo "Rustdesk"
+echo "https://rustdesk.com/"
+echo "Free Teamviewer alternative"
 
 echo "-----------------------"
 echo "${NOCOLOR}"
