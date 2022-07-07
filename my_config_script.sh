@@ -6,7 +6,7 @@ NOCOLOR="\033[0m"
 
 echo "---------------------------------------------------------"
 echo "----- ${YELLOW} Welcome to your new Computer          ---"
-echo "-----  Lets make it feel like a old friend ${NOCOLOR} ---"
+echo "----  Lets make it feel like an old friend ${NOCOLOR} ---"
 echo "---------------------------------------------------------"
 echo "---------------------------------------------------------"
 echo "---------------------------------------------------------"
