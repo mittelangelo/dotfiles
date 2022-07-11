@@ -27,7 +27,7 @@ echo "------------------------------------------------------------------"
 
 brew install \
 git \
-watch \ 
+viddy \ 
 kubectl \ 
 helm \
 ghostscript \
@@ -76,8 +76,7 @@ ransomwhere \
 knockknock \
 libreoffice \
 ledger-live \
-atom \
-little-snitch \
+lulu \
 #screaming-frog-seo-spider \
 #microsoft-teams \
 #zoomus  
