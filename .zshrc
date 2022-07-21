@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -71,9 +73,11 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git zsh-vi-mode history-substring-search zsh-autosuggestions)
-plugins=(git zsh-vi-mode history-substring-search zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+source <(kubectl completion zsh)
+
+set -o vi
 
 # User configuration
 
@@ -101,6 +105,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
+alias brwe="brew"
+alias watch="viddy -d"
 alias q="exit"
 alias gl="git log --all --decorate --oneline --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
 alias pdf_smaller="gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/default -dNOPAUSE -dQUIET -dBATCH -dDetectDuplicateImages \ -dCompressFonts=true -r150 -sOutputFile=output.pdf"
@@ -115,5 +121,3 @@ fi
 # to make vi-mode and fzf work together
 source /Users/lx/.oh-my-zsh/plugins/vi-mode/vi-mode.plugin.zsh
 zvm_after_init_commands+=('[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh')
-
-eval $(thefuck --alias)

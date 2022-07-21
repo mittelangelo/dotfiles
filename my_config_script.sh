@@ -58,6 +58,7 @@ docker \
 audacity \
 obs \
 vlc \
+shottr \
 iterm2 \
 vscodium \
 rectangle \
@@ -65,7 +66,6 @@ michaelvillar-timer \
 drawio \
 bitwarden \
 signal \
-slack \
 gimp \
 veracrypt \
 filezilla \
@@ -73,13 +73,11 @@ protonmail-bridge \
 oversight \
 blockblock \
 ransomwhere \
+reikey \
 knockknock \
 libreoffice \
 ledger-live \
-lulu \
-#screaming-frog-seo-spider \
-#microsoft-teams \
-#zoomus  
+lulu 
 
 # clenaup install process
 brew cleanup
@@ -184,7 +182,7 @@ echo "-------------------------------------------------------------------------"
 # Change the line 73 - ugly hardcoded ik 
 sed "73s/.*/plugins=(git zsh-vi-mode history-substring-search zsh-autosuggestions)/" ./.zshrc > ./.zshrc-copy
 rm ./.zshrc
-mv ./.zshrc2 ./.zshrc
+mv ./.zshrc-copy ./.zshrc
 
 
 echo "-------------------------------------------------------------------------"
@@ -192,14 +190,6 @@ echo "------  ${YELLOW} Things you need to install manually: ${NOCOLOR}--------"
 echo "-------------------------------------------------------------------------"
 
 echo "${YELLOW}"
-echo "Cider - Open Source Apple Music Client"
-echo "https://github.com/ciderapp/Cider"
-
-echo "-----------------------"
-
-echo "Little Snitch - Outbound network manager"
-echo "https://www.obdev.at/products/littlesnitch/download.html"
-
 echo "-----------------------"
 echo "Firefox"
 echo "> about:config"
@@ -211,6 +201,13 @@ echo "-----------------------"
 echo "Rustdesk"
 echo "https://rustdesk.com/"
 echo "Free Teamviewer alternative"
+
+echo "https://raw.githubusercontent.com/Homebrew/homebrew-cask/d12d301f9f43f03342fb24d473ca8ad1f345cdcd/Casks/lens.rb"
+echo "copy in > /opt/homebrew/Library/Taps/homebrew/homebrew-cask/Casks/lens.rb"
+echo "now exec: 'brew install lens'"
+echo "Next command will install a 3rd party app to manage casks in hombrew eg. not update casks - caution - check if this is still a good idea!"
+echo "then: 'brew tap buo/cask-upgrade'"
+echo "then: 'brew cu pin lens'"
 
 echo "-----------------------"
 echo "${NOCOLOR}"
